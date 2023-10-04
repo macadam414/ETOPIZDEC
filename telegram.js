@@ -5,7 +5,6 @@ console.log(exec)
 const bot = new Telegraf('6335444085:AAFA8ud23yVCsRbQKtsKNfzLNJsd3Yhw1tQ')
 
 bot.hears(/\d+/g, async (ctx) => {
-  
      const userGuess = parseInt(ctx.match[0])
       if  (Math.floor(Math.random() * 3) === userGuess) {
         await ctx.telegram.sendMessage(ctx.message.chat.id, `Красава. Пососешь?`)
@@ -27,7 +26,7 @@ bot.on(message('text'), async (ctx) => {
     case "Угадай число":
   
 
-      await ctx.reply('Я загадал число от 1 до 100. Попробуй угадать.')
+      await ctx.reply('Я загадал число от 0 до 2. Попробуй угадать.')
          
    }
 })
